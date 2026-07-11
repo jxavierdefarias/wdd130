@@ -40,7 +40,7 @@ aside {
   text-align: center;
 }
 
-aside img { /* corrigido: agora tem seletor + chaves */
+aside img { /*  */
   width: 200px;
   height: auto;
 }
@@ -51,7 +51,7 @@ main img {
   border: 1px solid steelblue;
   padding: 2px;
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
   box-shadow: 0 0 30px rgba(117, 116, 116, 0.3);
 }
 
