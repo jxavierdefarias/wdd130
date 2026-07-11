@@ -1,0 +1,5 @@
+Na pasta semana02, crie um novo arquivo CSS na subpasta estilos com o nome templo.css
+Abra o arquivo HTML existente na subpasta semana02 chamado templo.html
+Visualize o arquivo templo.html no seu navegador usando o Live/Five Server.
+Vincule o novo arquivo CSS no documento HTML usando o elemento <link>.
+Abra o arquivo templo.css e adicione estilo para que a página fique igual à da captura de tela a seguir.
