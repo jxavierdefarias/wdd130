@@ -1,3 +1,13 @@
+ 
+ :root {
+  --cor-de-fundo-do-titulo:#f06;
+  --cor-do-texto-do-titulo:#333;
+  --fonte-titulo:"Montserrat",Helvetica,sans-serif;
+  --paddig:1rem;
+  --border: 1px solid rgb(0 0 0 / 0.1);
+ }
+
+
 /* global resets */
  * {
  margin: 0;
