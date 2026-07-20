@@ -1,18 +1,19 @@
 /*pagina do rafting*/
 
-
 :root {
-  --cor-primaria: #055a05; /* verde-floresta */
-  --cor-secundaria: #f4a261; /* bege médio */
-  --cor-destaque1: #264653; /* azul-escuro acinzentado */
-  --cor-destaque2: #e9c46a; /* amarelo-claro dourado */
+  --cor-primaria: #055a05;
+  /* verde-floresta */
+  --cor-destaque1: #264653;
+  /* azul-escuro acinzentado */
+  --cor-destaque2: #e9c46a;
+  /* amarelo-claro dourado */
   --fonte-titulo: "Times New Roman", "Georgia", serif;
   --fonte-body: Arial, Helvetica, sans-serif;
 }
 
-header{
-background-color: var(--cor-primaria);
-color: var(--cor-destaque2);
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque2);
 }
 
 * {
@@ -26,18 +27,24 @@ body {
   color: var(--cor-destaque1);
 }
 
-header, main, footer {
+header,
+main,
+footer {
   width: 840px;
   margin: 0 auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--fonte-titulo);
   color: var(--cor-primaria);
   text-align: center;
 }
 
-nav, p, section, article {
+nav,
+p,
+section,
+article {
   margin: 16px;
   padding: 8px;
 }
@@ -67,7 +74,7 @@ h1 {
   color: #fff;
 }
 
-.hero article  {
+.hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
