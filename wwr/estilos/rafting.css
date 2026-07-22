@@ -3,7 +3,7 @@
 :root {
   --cor-primaria: #055a05;
   /* verde-floresta */
-  --cor-destaque1: #264653;
+  --cor-destaque1: #183946;
   /* azul-escuro acinzentado */
   --cor-destaque2: #e9c46a;
   /* amarelo-claro dourado */
@@ -103,5 +103,7 @@ h1 {
   width: 125px;
 }
 
-
+.redes-sociais a {
+    text-decoration: none;
+}
 /* teste  */
