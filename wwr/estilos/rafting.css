@@ -80,6 +80,7 @@ article {
     width: 100%;
     height: auto;
   }
+
 h1 {
   position: absolute;
   top: 20px;
@@ -98,6 +99,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 16px;
 }
+
 .hero article img {
   float: right;
   width: 125px;
