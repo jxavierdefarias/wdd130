@@ -110,11 +110,16 @@ footer {
 }
 
 .caixa {
-  border: 1px solid
-  padding:  1em;
+  border: 1px solid rgba(0,0,0,2)
+  padding: 1em;
   margin: 1em ;
   background-color :   # eee;
   }
+
+  .identaçao  {        
+    padding-left :rem; 
+  }
+
 
 
 
