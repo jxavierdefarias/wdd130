@@ -107,25 +107,25 @@ section {
 .redes-sociais a {
     text-decoration: none;
 }
-
 .hero {
   position: relative;
+  overflow: hidden; /* adiciona isso */
 }
 
 .hero img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .hero h1 {
   position: absolute;
   top: 20px;
-  width: 100%;
+  left: 0;
+  right: 0;
   text-align: center;
   color: #fff;
-  background-color: rgba(0,0,0,0.5);
-  padding: 1rem;
+  z-index: 1;
 }
 
 .hero article {
@@ -134,12 +134,7 @@ section {
   left: 20px;
   background-color: rgba(255,255,255,0.7);
   padding: 1rem;
-}
-
-
-.hero article img {
-  float: right;
-  width: 125px;
+  z-index: 1;
 }
 
 
