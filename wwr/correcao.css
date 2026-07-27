@@ -1,0 +1,74 @@
+:root {
+  --cor-primaria: #055a05; /* verde-floresta */
+  --cor-destaque1: #183946; /* azul-escuro acinzentado */
+  --cor-destaque2: #e9c46a; /* amarelo-claro dourado */
+  --fonte-titulo: "Times New Roman", "Georgia", serif;
+  --fonte-body: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-body);
+  color: var(--cor-destaque1);
+}
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque2);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav li {
+  flex: 1 1 auto;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* resto do código... */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 1rem;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(255,255,255,0.7);
+  padding: 1rem;
+}

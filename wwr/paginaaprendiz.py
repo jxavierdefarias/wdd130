@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <img src="imagens/logo.png" alt="Logo da Queda Dágua Rafting" width="200" height="100">
+    <img src="imagens/logo.png" alt="Logo da Queda Dágua Rafting">
     <nav>
       <ul>
         <li><a href="index.html">Página Inicial</a></li>
@@ -88,15 +88,23 @@
     <p>&copy; 2026 Queda D'água Rafting - Jorge Farias</p>
 
     <nav class="redes-sociais">
-      <a href="https://facebook.com"><img src="imagens/facebook.svg" alt="Facebook" width="30" height="30"></a>
-      <a href="https://linkedin.com"><img src="imagens/linkedin.svg" alt="LinkedIn" width="30" height="30"></a>
-      <a href="https://instagram.com"><img src="imagens/instagram.svg" alt="Instagram" width="30" height="30"></a>
+      <a href="https://facebook.com">
+        <img src="imagens/facebook.svg" alt="Ícone do Facebook">
+      </a>
+      <a href="https://linkedin.com">
+        <img src="imagens/linkedin.svg" alt="Ícone do LinkedIn">
+      </a>
+      <a href="https://instagram.com">
+        <img src="imagens/instagram.svg" alt="Ícone do Instagram">
+      </a>
     </nav>
   </footer>
-  
-  <a href="https://jigsaw.w3.org/css-validator/check/referer">
-    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS válido!">
-  </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="CSS válido!" />
+    </a>
+</p>
 </body>
 
 </html>
