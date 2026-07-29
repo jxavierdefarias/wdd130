@@ -1,3 +1,6 @@
+/*pagina do rafting*/
+
+
 :root {
   --cor-primaria: #055a05; /* verde-floresta */
   --cor-destaque1: #183946; /* azul-escuro acinzentado */
@@ -5,6 +8,7 @@
   --fonte-titulo: "Times New Roman", "Georgia", serif;
   --fonte-body: Arial, Helvetica, sans-serif;
 }
+
 
 * {
   margin: 0;
@@ -50,42 +54,57 @@ nav a {
   }
 }
 
+
 p {
-  margin: 1rem;
-  border: 1px solid rgb(0 0 0 / 10%);
-  padding: 1rem;
-  background-color: #bed;
-  max-width: 800px;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #bed;
+    max-width: 800px;
 }
 
-.grid {
+devtools-btn:hover {
+    background-color: #4a5a6a;
+}
+
+devtools-btn:active {
+    background-color: #36383a;
+}
+
+.grid{
   display: flex;
   align-items: center;
 }
-
 main {
+  grid-column:2/3;
   margin: 1rem;
 }
-
+    
 aside {
   width: 20rem;
   position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
-header, main, footer {
-  width: 100%;
-  max-width: 1000px;
+header,
+main,
+footer { 
+  width: 900px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--fonte-titulo);
   color: var(--cor-primaria);
-  text-align: center;
+  text-align: relative;
 }
 
-nav, p, section, article {
+nav,
+p,
+section,
+article {
   margin: 5px;
   padding: 5px;
 }
@@ -95,34 +114,33 @@ section {
 }
 
 .redes-sociais a {
-  text-decoration: none;
+    text-decoration: none;
 }
-
 .hero {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:  center;
   align-items: flex-start;
   gap: 1rem;
   padding: 10px;
-  min-height: 400px;
+  min-height: 900px;
 }
 
 .hero img {
   position: absolute;
   top: 0;
-  left: 0;
+  left:0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover ;
   z-index: 0;
 }
 
-.hero h1 {
+.hero  h1 {
   position: relative;
   margin: 0;
-  width: auto;
+  width:auto;
   padding: 1rem;
   background-color: rgba(0,0,0,0.5);
   color: #fff;
@@ -131,32 +149,33 @@ section {
 
 .hero article {
   position: relative;
-  z-index: 1;
+  z-index:  1;
   background-color: rgba(255,255,255,0.7);
-  padding: 1rem;
+  padding:1rem;
   margin: 0;
-  max-width: 400px;
+  max-width: 1000px;
 }
 
 .flex-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 }
+
 
 figure {
   border: thin #c0c0c0 solid;
   display: flex;
-  flex-flow: column;
+  flex-flow: relative;
   padding: 5px;
   max-width: 220px;
   margin: auto;
 }
 
-figure img {
-  max-width: 300px;
-  max-height: 200px;
+img {
+  max-width: 200px;
+  max-height: 150px;
 }
 
 figcaption {
@@ -166,3 +185,38 @@ figcaption {
   padding: 3px;
   text-align: center;
 }
+
+
+button:first-child {
+  align-self: flex-end;
+}
+
+article {
+  flex: 1  400px;
+}
+
+article:nth-of-type(3) {
+  flex: 3 200px;
+  display: flex;
+  flex-flow: column;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+article:nth-of-type(3) div:first-child {
+  flex: 1 100px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+
+/* teste */
