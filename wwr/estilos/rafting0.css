@@ -1,0 +1,239 @@
+:root {
+    /* Variáveis de cor e fonte (caracteres ASCII garantidos) */
+    --cor-primaria: #094009;
+    --cor-secundaria: #070908;
+    --cor-destaque1: #264653;
+    --cor-destaque2: rgba(255, 255, 255, 0.85);
+    --fonte-titulo: "Times New Roman", "Georgia", serif;
+    --fonte-body: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-body);
+    color: var(--cor-destaque1);
+}
+
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* HEADER & NAVEGAÇÃO */
+header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    background-color: #045457;
+    padding: 10px 20px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* TÍTULOS GERAIS */
+h1, h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-destaque1);
+    text-align: center;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    --cor-primaria: #094009;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #070908;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--cor-destaque2);
+    padding: 15px;
+    overflow: hidden; /* Mantém o float da imagem contido */
+}
+
+.hero article img {
+    float: right;
+    width: 120px;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+}
+
+/* SEÇÃO HISTÓRIA */
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+    align-items: center;
+    margin: 15px auto;
+    background-color: #f0f4f8;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.historia h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.historia p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.historia img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #999;
+}
+
+/* SEÇÃO AVENTURA */
+.aventura {
+    margin: 15px auto;
+    background-color: #f0f4f8;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.aventura h2 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.aventura-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.aventura figure {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.aventura img {
+    width: 200;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+
+.aventura figcaption {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    color: #070908;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: row;
+}
+
+
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: relative;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #045457;
+    color: white;
+    margin-top: 15px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
