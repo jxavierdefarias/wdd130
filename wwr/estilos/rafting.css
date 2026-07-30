@@ -1,7 +1,6 @@
 :root {
     /* Variáveis de cor e fonte (caracteres ASCII garantidos) */
     --cor-primaria: #094009;
-    --cor-secundaria: #070908;
     --cor-destaque1: #264653;
     --cor-destaque2: rgba(255, 255, 255, 0.85);
     --fonte-titulo: "Times New Roman", "Georgia", serif;
