@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - AXF Rafting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Mesmo cabeçalho das outras páginas -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+                <!-- outros links -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contato">
+        <h1>Fale Conosco</h1>
+
+        <section class="info-empresa">
+            <h2>Informações da Empresa</h2>
+            <p>AXF Rafting</p>
+            <p>Endereço: Rua do Rio, 123 - Centro</p>
+            <p>Telefone: (11) 9999-9999</p>
+            <p>Email: contato@axfrafring.com</p>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?..." frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <section class="equipe">
+            <h2>Nossa Equipe</h2>
+            <div class="funcionario">
+                <img src="joao.jpg" alt="João">
+                <p>João - Guia de Rafting</p>
+            </div>
+            <div class="funcionario">
+                <img src="maria.jpg" alt="Maria">
+                <p>Maria - Atendimento</p>
+            </div>
+            <div class="funcionario">
+                <img src="pedro.jpg" alt="Pedro">
+                <p>Pedro - Técnico</p>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <h2>Envie uma Mensagem</h2>
+            <form>
+                <label>Nome:</label>
+                <input type="text" name="nome" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Assunto:</label>
+                <div>
+                    <input type="radio" name="assunto" value="consulta"> Consulta Geral
+                    <input type="radio" name="assunto" value="reserva"> Pergunta sobre Reserva
+                    <input type="radio" name="assunto" value="sugestao"> Sugestão de Site
+                </div>
+
+                <label>Mensagem:</label>
+                <textarea name="mensagem" required></textarea>
+
+                <div>
+                    <input type="checkbox" name="newsletter">
+                    <label>Quero receber a newsletter mensal</label>
+                </div>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <!-- Mesmo rodapé das outras páginas -->
+    </footer>
+</body>
+</html>

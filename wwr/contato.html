@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós |Queda D'água Rafting </title>
-    <meta name="description" content="Conheça a história e a missão da nossa empresa de rafting em corredeiras..">
+    <title>Fale Conosco | Queda D´Água Rafting</title>
+    <meta name="description" content="Entre em contato com a Queda D´Água Rafting. Tire suas dúvidas, envie sugestões ou reserve sua próxima aventura.">
     <meta name="author" content="Jorge Farias">
     <link rel="stylesheet" href="estilos/rafting.css">
 </head>
@@ -13,7 +13,7 @@
 <body>
 
     <header>
-    
+        <img src="imagens/logo.png" alt="Logo Queda D´Água Rafting" class="logo">
         <nav>
             <ul>
                 <li><a href="index.html">Página Inicial</a></li>
@@ -25,51 +25,79 @@
     </header>
 
     <main>
-        <!-- HERO SECTION -->
-        <div class="hero">
-            <h1>!</h1>
-            <img src=" alt="Grupo praticando rafting">
-            <article>
-                <p>
-               
-          superação individual.</p>
-                <img src="imagens/cliente-feliz.jpg" alt="Rafting em ação">
-            </article>
-        </div>
-
-        <!-- SEÇÃO HISTÓRIA (Texto + Imagem + Texto) -->
-        <section class="historia">
-            <h2>História</h2>
-            <p></p>
-        
-            <img src="" alt="História da empresa">
-            <p></p> 
-        
+        <!-- SEÇÃO SUPERIOR: TÍTULO E CONTATOS DA SUA EMPRESA -->
+        <section class="topo-contato">
+            <h1> Queda D´Água Rafting </h1>
+            <address class="informacoes-contato">
+                <p> Rua Ecologica,s/n</p>
+                <p>Batatais, SÃO PAULO</p>
+                <p>+55 11 99999-9999</p>
+                <p>info@quedadagua.com</p>
+            </address>
         </section>
 
-        <!-- SEÇÃO AVENTURA (5 imagens em sequência) -->
-        <section class="aventura">
-            <h2>A aventura está te esperando!</h2>
-            <div class="aventura-cards">
+        <!-- SEÇÃO PRINCIPAL (MAPA À ESQUERDA + FORMULÁRIO À DIREITA) -->
+        <section class="contato-container">
+            <div class="mapa-coluna">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.089852899478!2d-54.585421!3d-25.539821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDMyJzIzLjMiUyA1NMKwMzUnMDcuNSJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="form-coluna">
+                <form action="#" method="post" class="form-contato">
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite aqui" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">e-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite aqui" required>
+                    </div>
+
+                    <div class="campo campo-radio">
+                        <span class="label-fake">Propósito da Mensagem</span>
+                        <div class="opcoes-radio">
+                            <label><input type="radio" name="proposito" value="geral" checked> Dúvida Geral</label>
+                            <label><input type="radio" name="proposito" value="reserva"> Pergunta sobre Reservas</label>
+                            <label><input type="radio" name="proposito" value="sugestao"> Sugestão</label>
+                        </div>
+                    </div>
+
+                    <div class="campo campo-textarea">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite aqui" rows="4" required></textarea>
+                    </div>
+
+                    <div class="campo-checkbox">
+                        <label>
+                            <input type="checkbox" name="newsletter" value="sim"> Por favor, me inscreva na newsletter mensal
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Entrar em Contato!</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SEÇÃO EQUIPE / SERVIÇO -->
+        <section class="equipe-secao">
+            <h2>AGUARDAMOS SUA VISITA</h2>
+            <div class="equipe-cards">
                 <figure>
-                    <img src="imagens/rioparado.jpg" alt="Imagem 1">
-                    <figcaption>Águas Calmas</figcaption>
+                    <img src="imagens/ceo.jpg" alt="CEO da Empresa">
+                    <figcaption>CEO da Empresa</figcaption>
                 </figure>
                 <figure>
-                    <img src="imagens/3bots.jpg" alt="Imagem 2">
-                    <figcaption>Ecoturismo</figcaption>
+                    <img src="imagens/gerente.jpg" alt="Gerente da Empresa">
+                    <figcaption>Gerente da Empresa</figcaption>
                 </figure>
                 <figure>
-                    <img src="imagens/chegandoboot.jpg" alt="Imagem 3">
-                    <figcaption>Para Todos os Níveis</figcaption>
-                </figure>
-                <figure>
-                    <img src="imagens/equipe.jpg" alt="Imagem 4">
-                    <figcaption>Águas Deslizantes</figcaption>
-                </figure>
-                <figure>
-                    <img src="imagens/corredeira.jpg" alt="Imagem 5">
-                    <figcaption>Trilha Ecológica</figcaption>
+                    <img src="imagens/vendedor.jpg" alt="Vendedor da Empresa">
+                    <figcaption>Vendedor da Empresa</figcaption>
                 </figure>
             </div>
         </section>
@@ -77,17 +105,11 @@
 
     <!-- RODAPÉ -->
     <footer>
-        <p>&copy; 2026 | Queda D'água Rafting  | Jorge Farias</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com" target="_blank">
-                <img src="imagens/facebook.svg" alt="Facebook">
-            </a> 
-            <a href="https://instagram.com" target="_blank">
-                <img src="imagens/instagram.svg" alt="Instagram">
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-                <img src="imagens/linkedin.svg" alt="LinkedIn">
-            </a>
+         <p>&copy; 2026| Queda D´Água Rafting | Jorge Farias</p>
+         <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank"><img src="imagens/facebook.png" alt="Facebook"></a> 
+            <a href="https://instagram.com" target="_blank"><img src="imagens/instagram.png" alt="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="imagens/linkedin.png" alt="LinkedIn"></a>
         </nav>
     </footer>
 

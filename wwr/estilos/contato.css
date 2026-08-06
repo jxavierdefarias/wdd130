@@ -1,0 +1,363 @@
+:root {
+    --cor-primaria: #0b3c5d;
+    --cor-secundaria: #070908;
+    --cor-fundo-main: #c9dde5;
+    --cor-fundo-body: #e0ecef;
+    --cor-texto: #1a252c;
+    --fonte-body: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-body);
+    background-color: var(--cor-fundo-body);
+    color: var(--cor-texto);
+}
+
+/* --- HEADER --- */
+header {
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header img, 
+header .logo {
+    width: 90px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 2px;
+}
+
+header nav a:hover {
+    background-color: #d1d5db;
+}
+
+/* --- MAIN CONTAINER --- */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: var(--cor-fundo-main);
+    padding: 30px 40px;
+    min-height: 100vh;
+}
+
+/* --- PÁGINA SOBRE NÓS: HERO SECTION --- */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.hero > img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.hero article {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.hero article p {
+    flex: 1;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.hero article img {
+    width: 45%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* --- PÁGINA SOBRE NÓS: HISTÓRIA --- */
+.historia {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.historia h2 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.historia p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.historia img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 10px 0 15px 0;
+}
+
+/* --- PÁGINA SOBRE NÓS: AVENTURA (CARDS/FIGCAPTION) --- */
+.aventura {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aventura h2 {
+    font-size: 1.4rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.aventura-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.aventura-cards figure {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.aventura-cards img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #888;
+}
+
+.aventura-cards figcaption {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+/* --- PÁGINA CONTATO: TOPO CONTATO --- */
+.topo-contato {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.topo-contato h1 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.informacoes-contato {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* --- PÁGINA CONTATO: FORMULÁRIO E MAPA --- */
+.contato-container {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+.mapa-coluna {
+    flex: 1;
+    border: 1px solid #999;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.mapa-coluna iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: none;
+}
+
+.form-coluna {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+}
+
+.campo label, 
+.campo .label-fake {
+    width: 140px;
+    font-size: 0.88rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo textarea {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #888;
+    border-radius: 6px;
+    background-color: #eef4f7;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.campo.campo-textarea {
+    align-items: flex-start;
+}
+
+.opcoes-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+}
+
+.opcoes-radio label {
+    width: auto;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.campo-checkbox {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.campo-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 7px;
+    background-color: #d1dbe3;
+    border: 1px solid #777;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #111;
+    margin-top: 5px;
+}
+
+.btn-enviar:hover {
+    background-color: #bdc9d4;
+}
+
+/* --- PÁGINA CONTATO: EQUIPE --- */
+.equipe-secao {
+    border: 1px solid #9bb1be;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.equipe-secao h2 {
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.equipe-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.equipe-cards figure {
+    text-align: center;
+}
+
+.equipe-cards img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #888;
+}
+
+.equipe-cards figcaption {
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--cor-primaria);
+}
+
+/* --- FOOTER --- */
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    font-size: 0.8rem;
+}
+
+footer .socialmedia {
+    display: flex;
+    gap: 12px;
+}
+
+footer .socialmedia img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
