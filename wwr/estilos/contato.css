@@ -305,7 +305,7 @@ main {
     background-color: #bdc9d4;
 }
 
-/* --- EQUIPE --- */
+/* --- EQUIPE: IMAGENS LADO A LADO --- */
 .equipe-secao {
     border: 1px solid #9bb1be;
     border-radius: 8px;
@@ -322,31 +322,32 @@ main {
 }
 
 .equipe-cards {
-    display: flex;
-    justify-content: space-around;
+    display: flex;           /* ESSA LINHA QUE DEIXA LADO A LADO */
+    justify-content: center; /* centraliza as 3 */
     align-items: center;
-    gap: 15px;
-    flex-wrap: wrap; /* responsivo */
+    gap: 30px;               /* espaço entre elas */
+    flex-wrap: wrap;         /* quebra no celular */
 }
 
 .equipe-cards figure {
     text-align: center;
+    flex: 0 1 120px; /* cada foto tem 120px */
 }
 
 .equipe-cards img {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #888;
+    border-radius: 50%; /* redondo */
+    border: 2px solid var(--cor-primaria);
 }
 
 .equipe-cards figcaption {
-    margin-top: 6px;
+    margin-top: 8px;
     font-size: 0.8rem;
     color: var(--cor-primaria);
+    font-weight: bold;
 }
-
 /* --- FOOTER --- */
 footer {
     display: grid;
