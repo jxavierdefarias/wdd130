@@ -40,7 +40,6 @@ header nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
-    flex-wrap: wrap; /* evita quebrar feio em telas pequenas */
 }
 
 header nav a {
@@ -51,7 +50,6 @@ header nav a {
     font-weight: bold;
     font-size: 0.9rem;
     border-radius: 2px;
-    transition: background-color 0.2s; /* suaviza o hover */
 }
 
 header nav a:hover {
@@ -67,7 +65,7 @@ main {
     min-height: 100vh;
 }
 
-/* --- HERO --- */
+/* --- PÁGINA SOBRE NÓS: HERO SECTION --- */
 .hero {
     text-align: center;
     margin-bottom: 30px;
@@ -93,23 +91,21 @@ main {
     align-items: center;
     text-align: left;
     margin-top: 15px;
-    flex-wrap: wrap; /* responsivo */
 }
 
 .hero article p {
-    flex: 1 1 300px; /* cresce e quebra */
+    flex: 1;
     line-height: 1.5;
     font-size: 0.95rem;
 }
 
 .hero article img {
     width: 45%;
-    min-width: 250px; /* não fica minúsculo */
     border-radius: 6px;
     object-fit: cover;
 }
 
-/* --- HISTORIA --- */
+/* --- PÁGINA SOBRE NÓS: HISTÓRIA --- */
 .historia {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 20px;
@@ -137,7 +133,7 @@ main {
     margin: 10px 0 15px 0;
 }
 
-/* --- AVENTURA CARDS --- */
+/* --- PÁGINA SOBRE NÓS: AVENTURA (CARDS/FIGCAPTION) --- */
 .aventura {
     text-align: center;
     margin-bottom: 20px;
@@ -157,7 +153,8 @@ main {
 }
 
 .aventura-cards figure {
-    flex: 1 1 150px; /* responsivo */
+    flex: 1;
+    min-width: 150px;
     text-align: center;
 }
 
@@ -176,7 +173,7 @@ main {
     color: var(--cor-primaria);
 }
 
-/* --- CONTATO --- */
+/* --- PÁGINA CONTATO: TOPO CONTATO --- */
 .topo-contato {
     text-align: center;
     margin-bottom: 25px;
@@ -195,31 +192,31 @@ main {
     line-height: 1.4;
 }
 
+/* --- PÁGINA CONTATO: FORMULÁRIO E MAPA --- */
 .contato-container {
     display: flex;
     gap: 30px;
     align-items: stretch;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* junta as 2 versões que você tinha */
 }
 
 .mapa-coluna {
-    flex: 1 1 400px; /* responsivo */
+    flex: 1;
     border: 1px solid #999;
     border-radius: 4px;
     overflow: hidden;
     background-color: #fff;
 }
 
-.mapa-iframe { /* classe nova pra usar no HTML */
+.mapa-coluna iframe {
     width: 100%;
-    height: 350px;
+    height: 100%;
+    min-height: 320px;
     border: none;
-    display: block;
 }
 
 .form-coluna {
-    flex: 1.2 1 400px;
+    flex: 1.2;
     display: flex;
     flex-direction: column;
 }
@@ -233,7 +230,6 @@ main {
 .campo {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* pra label quebrar em mobile */
 }
 
 .campo label, 
@@ -248,7 +244,6 @@ main {
 .campo input[type="email"],
 .campo textarea {
     flex: 1;
-    min-width: 200px; /* não esmaga o input */
     padding: 6px 10px;
     border: 1px solid #888;
     border-radius: 6px;
@@ -289,23 +284,29 @@ main {
 
 .btn-enviar {
     width: 100%;
-    padding: 10px; /* aumentei um pouco pra ficar clicável */
+    padding: 7px;
     background-color: #d1dbe3;
     border: 1px solid #777;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 0.85rem;
     color: #111;
     margin-top: 5px;
-    transition: background-color 0.2s;
 }
 
 .btn-enviar:hover {
     background-color: #bdc9d4;
+}.contato-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
+.mapa-coluna, .form-coluna {
+    flex: 1 1 400px;
+}
+.mapa-iframe { width: 100%; height: 350px; border: none; }
 
-/* --- EQUIPE --- */
+/* --- PÁGINA CONTATO: EQUIPE --- */
 .equipe-secao {
     border: 1px solid #9bb1be;
     border-radius: 8px;
@@ -325,8 +326,6 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 15px;
-    flex-wrap: wrap; /* responsivo */
 }
 
 .equipe-cards figure {
@@ -348,6 +347,9 @@ main {
 }
 
 /* --- FOOTER --- */
+
+
+
 footer {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -356,8 +358,6 @@ footer {
     background-color: #045457;
     color: white;
     margin-top: 15px;
-    max-width: 960px;
-    margin: 15px auto 0 auto; /* centraliza igual ao header/main */
 }
 
 footer p {
@@ -375,3 +375,5 @@ footer p {
     height: 32px;
     object-fit: cover;
 }
+
+ 
