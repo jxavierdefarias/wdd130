@@ -1,82 +1,75 @@
 :root {
-    /* Variáveis de cor e fonte (caracteres ASCII garantidos) */
-    --cor-primaria: #094009;
-    --cor-destaque1: #264653;
-    --cor-destaque2: rgba(255, 255, 255, 0.85);
-    --fonte-titulo: "Times New Roman", "Georgia", serif;
+    --cor-primaria: #0b3c5d;
+    --cor-secundaria: #070908;
+    --cor-fundo-main: #c9dde5;
+    --cor-fundo-body: #e0ecef;
+    --cor-texto: #1a252c;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: var(--fonte-body);
-    color: var(--cor-destaque1);
+    background-color: var(--cor-fundo-body);
+    color: var(--cor-texto);
 }
 
-header,
-main,
-footer {
-    width: 840px;
+/* --- HEADER --- */
+header {
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
-/* HEADER & NAVEGAÇÃO */
-header {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    align-items: center;
-    background-color: #045457;
-    padding: 10px 20px;
-}
-
-header img {
-    width: 100px;
+header img,
+header .logo {
+    width: 90px;
     height: auto;
-    display: block;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav ul {
-    display: flex;
+header nav ul {
     list-style: none;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* evita quebrar feio em telas pequenas */
 }
 
-nav a {
-    display: block;
-    text-decoration: none;
-    color: #333;
+header nav a {
     background-color: #ffffff;
-    padding: 8px 16px;
-    border: 1px solid #ccc;
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 18px;
     font-weight: bold;
     font-size: 0.9rem;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+    /* suaviza o hover */
 }
 
-nav a:hover {
-    background-color: var(--cor-primaria);
-    color: white;
+header nav a:hover {
+    background-color: #eaedf0;
 }
 
-/* TÍTULOS GERAIS */
-h1, h2 {
-    font-family: var(--fonte-titulo);
-    color: var(--cor-destaque1);
-    text-align: center;
+/* --- MAIN CONTAINER --- */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: var(--cor-fundo-main);
+    padding: 30px 40px;
+    min-height: 100vh;
 }
 
-/* HERO SECTION */
+/* --- /* HERO SECTION */
 .hero {
     position: relative;
     width: 100%;
@@ -108,7 +101,8 @@ h1, h2 {
     right: 20px;
     background-color: var(--cor-destaque2);
     padding: 15px;
-    overflow: hidden; /* Mantém o float da imagem contido */
+    overflow: hidden;
+    /* Mantém o float da imagem contido */
 }
 
 .hero article img {
@@ -119,49 +113,43 @@ h1, h2 {
     border: 1px solid #ccc;
 }
 
-/* SEÇÃO HISTÓRIA */
+/* --- HISTORIA --- */
 .historia {
-    display: grid;
-    grid-template-columns: 1fr 180px 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 15px;
-    align-items: center;
-    margin: 15px auto;
-    background-color: #f0f4f8;
-    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 .historia h2 {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
 }
 
 .historia p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
 }
 
 .historia img {
     width: 100%;
-    height: 120px;
+    max-height: 300px;
     object-fit: cover;
-    border: 1px solid #999;
+    border-radius: 6px;
+    margin: 10px 0 15px 0;
 }
 
-/* SEÇÃO AVENTURA */
+/* --- AVENTURA CARDS --- */
 .aventura {
-    margin: 15px auto;
-    background-color: #f0f4f8;
-    border: 1px solid #ccc;
-    padding: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .aventura h2 {
-    width: 100%;
+    font-size: 1.4rem;
+    color: var(--cor-primaria);
     margin-bottom: 15px;
 }
 
@@ -169,29 +157,216 @@ h1, h2 {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
-.aventura figure {
-    flex: 1;
-    margin: 0;
+.aventura-cards figure {
+    flex: 1 1 150px;
+    /* responsivo */
     text-align: center;
 }
 
-.aventura img {
+.aventura-cards img {
     width: 100%;
-    height: 100px;
+    height: 120px;
     object-fit: cover;
-    border: 1px solid #ccc;
-    background-color: #eee;
+    border-radius: 6px;
+    border: 1px solid #888;
 }
 
-.aventura figcaption {
+.aventura-cards figcaption {
+    margin-top: 6px;
     font-size: 0.85rem;
-    margin-top: 5px;
-    color: #070908;
+    font-weight: bold;
+    color: var(--cor-primaria);
 }
 
-/* FOOTER */
+/* --- CONTATO --- */
+.topo-contato {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.topo-contato h1 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.informacoes-contato {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.contato-container {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    /* junta as 2 versões que você tinha */
+}
+
+.mapa-coluna {
+    flex: 1 1 400px;
+    /* responsivo */
+    border: 1px solid #999;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.mapa-iframe {
+    /* classe nova pra usar no HTML */
+    width: 100%;
+    height: 350px;
+    border: none;
+    display: block;
+}
+
+.form-coluna {
+    flex: 1.2 1 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* pra label quebrar em mobile */
+}
+
+.campo label,
+.campo .label-fake {
+    width: 140px;
+    font-size: 0.88rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo textarea {
+    flex: 1;
+    min-width: 200px;
+    /* não esmaga o input */
+    padding: 6px 10px;
+    border: 1px solid #888;
+    border-radius: 6px;
+    background-color: #eef4f7;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.campo.campo-textarea {
+    align-items: flex-start;
+}
+
+.opcoes-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+}
+
+.opcoes-radio label {
+    width: auto;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.campo-checkbox {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.campo-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 10px;
+    /* aumentei um pouco pra ficar clicável */
+    background-color: #d1dbe3;
+    border: 1px solid #777;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #111;
+    margin-top: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #bdc9d4;
+}
+
+/* --- EQUIPE: IMAGENS LADO A LADO --- */
+.equipe-secao {
+    border: 1px solid #9bb1be;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.equipe-secao h2 {
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.equipe-cards {
+    display: flex;
+    /* ESSA LINHA QUE DEIXA LADO A LADO */
+    justify-content: center;
+    /* centraliza as 3 */
+    align-items: center;
+    gap: 30px;
+    /* espaço entre elas */
+    flex-wrap: wrap;
+    /* quebra no celular */
+}
+
+.equipe-cards figure {
+    text-align: center;
+    flex: 0 1 120px;
+    /* cada foto tem 120px */
+}
+
+.equipe-cards img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* redondo */
+    border: 2px solid var(--cor-primaria);
+}
+
+.equipe-cards figcaption {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
 footer {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -200,6 +375,9 @@ footer {
     background-color: #045457;
     color: white;
     margin-top: 15px;
+    max-width: 960px;
+    margin: 15px auto 0 auto;
+    /* centraliza igual ao header/main */
 }
 
 footer p {
