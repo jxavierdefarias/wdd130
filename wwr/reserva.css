@@ -42,3 +42,24 @@
     border-radius: 6px;
     object-fit: cover;
 }
+
+/* HEADER 5*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #004d40;
+    color: white;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+header nav a:hover {
+    color: #26a69a;
+}
