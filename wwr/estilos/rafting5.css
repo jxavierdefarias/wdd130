@@ -33,7 +33,8 @@ a {
 header,
 main,
 footer {
-    width: 840px;
+    width: 1200px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -272,6 +273,18 @@ h2 {
     gap: 10px;
 }
 
+.equipe-cards {
+    display: flex;
+    /* ESSA LINHA QUE DEIXA LADO A LADO */
+    justify-content: center;
+    /* centraliza as 3 */
+    align-items: center;
+    gap: 30px;
+    /* espaço entre elas */
+    flex-wrap: wrap;
+    /* quebra no celular */
+}
+
 .aventura figure {
     flex: 1;
     margin: 0;
@@ -294,8 +307,8 @@ h2 {
 
 .ofertas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
 }
 
 .oferta-card img {

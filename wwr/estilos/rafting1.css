@@ -169,8 +169,20 @@ h2 {
 
 .aventura-cards {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.equipe-cards {
+    display: flex;
+    /* ESSA LINHA QUE DEIXA LADO A LADO */
+    justify-content: center;
+    /* centraliza as 3 */
+    align-items: center;
+    gap: 30px;
+    /* espaço entre elas */
+    flex-wrap: wrap;
+    /* quebra no celular */
 }
 
 .aventura figure {
