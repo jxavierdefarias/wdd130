@@ -334,17 +334,19 @@ footer {
     padding: 1.5rem 5%;
 }
 
-.socialmedia {
+.redes-sociais {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.socialmedia img {
+.redes-sociais img {
     width: 32px;
     height: 32px;
 }
+
+
 
 footer {
     display: grid;
